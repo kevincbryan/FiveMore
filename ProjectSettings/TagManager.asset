@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Interactable
+  - Door
+  - Floor
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2967246141
+    locked: 0
+  - name: Detail
+    uniqueID: 3472191927
+    locked: 0
+  - name: Floor
+    uniqueID: 983473641
+    locked: 0
+  - name: Door
+    uniqueID: 3055705189
+    locked: 0
+  - name: Interactable
+    uniqueID: 3623809937
     locked: 0
