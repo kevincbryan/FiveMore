@@ -815,7 +815,7 @@ Transform:
   m_GameObject: {fileID: 7315975498660131136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.83328056, y: -0.050738595, z: -9.9140625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children:
   - {fileID: 7315975497406131564}
   - {fileID: 7315975498635448269}
@@ -1231,11 +1231,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7315975498660131139}
     m_Modifications:
-    - target: {fileID: 9136026644870658570, guid: fe7f544806ddb564eb6a5bff2d720347,
-        type: 3}
-      propertyPath: m_Name
-      value: ColliderWall (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1074199998147554766, guid: fe7f544806ddb564eb6a5bff2d720347,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1296,6 +1291,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.00006
       objectReference: {fileID: 0}
+    - target: {fileID: 9136026644870658570, guid: fe7f544806ddb564eb6a5bff2d720347,
+        type: 3}
+      propertyPath: m_Name
+      value: ColliderWall (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7f544806ddb564eb6a5bff2d720347, type: 3}
 --- !u!4 &7741621516177829647 stripped
@@ -1311,11 +1311,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7315975498660131139}
     m_Modifications:
-    - target: {fileID: 9136026644870658570, guid: fe7f544806ddb564eb6a5bff2d720347,
-        type: 3}
-      propertyPath: m_Name
-      value: ColliderWall
-      objectReference: {fileID: 0}
     - target: {fileID: 1074199998147554766, guid: fe7f544806ddb564eb6a5bff2d720347,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1370,6 +1365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136026644870658570, guid: fe7f544806ddb564eb6a5bff2d720347,
+        type: 3}
+      propertyPath: m_Name
+      value: ColliderWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7f544806ddb564eb6a5bff2d720347, type: 3}

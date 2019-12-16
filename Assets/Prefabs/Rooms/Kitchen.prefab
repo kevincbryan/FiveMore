@@ -737,7 +737,7 @@ Transform:
   m_GameObject: {fileID: 6833979855528920074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9117355791763768295}
   - {fileID: 4521521926677086584}
@@ -1130,11 +1130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339439268634315125}
     m_Modifications:
-    - target: {fileID: 9136026644870658570, guid: fe7f544806ddb564eb6a5bff2d720347,
-        type: 3}
-      propertyPath: m_Name
-      value: ColliderWall (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1074199998147554766, guid: fe7f544806ddb564eb6a5bff2d720347,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -1184,6 +1179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136026644870658570, guid: fe7f544806ddb564eb6a5bff2d720347,
+        type: 3}
+      propertyPath: m_Name
+      value: ColliderWall (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7f544806ddb564eb6a5bff2d720347, type: 3}

@@ -138,10 +138,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms:
-  - {fileID: 7130020134115867450, guid: 06f8136947a5f0647a5bdac7cedeb80e, type: 3}
-  - {fileID: 8470765221255220640, guid: 4f04aa77ef7f51f43950896c2e33368a, type: 3}
-  - {fileID: 6642405988705917769, guid: 125f270fbb0146d4da40010f0d1433eb, type: 3}
-  - {fileID: 8048957627618169346, guid: eaa42b829b3399d42a40a08938c4b356, type: 3}
+  - {fileID: 15986220051532989, guid: 15b09274bd000c74daeb9b111187ae18, type: 3}
+  - {fileID: 7315975498660131136, guid: aedf8d65df2bb8e46b4592a0d136eb4a, type: 3}
+  - {fileID: 6833979855528920074, guid: 54b29e5637b495b4882d1293284f01d8, type: 3}
+  - {fileID: 3606015174527093530, guid: a4faa7d8f577be14c8cf7964a298d3fe, type: 3}
   roomLocs:
   - {fileID: 6423843346138593569}
   - {fileID: 6423843348035457035}
