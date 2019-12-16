@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float playerSpeed = 10f;
+    public float playerSpeed = 5f;
     public bool isMoving = false;
+    public bool facingRight = false;
+    public bool facingUp = false;
     private Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +24,27 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetAxis ("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
+            if (Input.GetAxis ("Horizontal") > 0)
+            {
+                facingRight = true;
+            }
+            else
+            {
+                facingRight = false;
+            }
+
+            if (Input.GetAxis ("Vertical") > 0)
+            {
+                facingUp = true;
+            }
+            else
+            {
+                facingUp = false;
+            }
+
+
             isMoving = true;
-            Debug.Log("getting Input " + Input.GetAxis ("Horizontal") + Input.GetAxis ("Vertical"));
+            //Debug.Log("getting Input " + Input.GetAxis ("Horizontal") + Input.GetAxis ("Vertical"));
             Move();
         }
         else
@@ -40,8 +62,9 @@ public class PlayerController : MonoBehaviour
 
         moveForward += Input.GetAxis("Vertical");
         moveRight += Input.GetAxis("Horizontal");
+        //Debug.Log("Move Forward is: " + moveForward + "MoveRight is: " + moveRight);
 
-        Vector3 moveVector  = ((transform.forward * moveForward) + (transform.right * moveRight));
+        Vector3 moveVector  = ((transform.up * moveForward) + (transform.right * moveRight));
 
         moveVector.Normalize();
         moveVector *= playerSpeed * Time.deltaTime;
