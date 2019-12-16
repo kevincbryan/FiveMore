@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
 
+    public GameObject triggerArea;
+    private bool isFiring = false;
+    public float fireDuration = .5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,8 +53,16 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("No input");
+            //Debug.Log("No input");
             isMoving = false;
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (isFiring == false)
+            {
+                ActivateTrigger();
+            }
         }
     }
 
@@ -69,5 +81,19 @@ public class PlayerController : MonoBehaviour
         moveVector.Normalize();
         moveVector *= playerSpeed * Time.deltaTime;
         transform.position += moveVector;
+    }
+
+
+    private void ActivateTrigger ()
+    {
+        triggerArea.SetActive(true);
+        isFiring = true;
+        Invoke("DeactivateTrigger", fireDuration);
+    }
+
+    private void DeactivateTrigger ()
+    {
+        triggerArea.SetActive(false);
+        isFiring = false;
     }
 }
