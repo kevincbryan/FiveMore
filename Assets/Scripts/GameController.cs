@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public Slider sleepMeter;
     public Slider disruptionMeter;
    
+    public bool inBed = true;
 
     public int distractions = 0;
     private int minDistractions = 0;
@@ -29,7 +30,11 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sleepValue += (sleepCapacity - distractions) * sleepRate * Time.deltaTime;
+
+        if (inBed == true){
+            sleepValue += (sleepCapacity - distractions) * sleepRate * Time.deltaTime;
+        }
+        
 
         sleepMeter.value = maxSleepValue - sleepValue;
         disruptionMeter.value = maxDistractions - distractions;

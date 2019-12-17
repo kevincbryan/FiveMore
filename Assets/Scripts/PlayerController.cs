@@ -15,11 +15,23 @@ public class PlayerController : MonoBehaviour
     private bool isFiring = false;
     public float fireDuration = .5f;
 
+
+    private BedDetector bed;
+    private Transform bedLoc;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Debug.Log("PlayerController is running");
+
+        bed= FindObjectOfType<BedDetector>();
+        bedLoc = bed.transform;
+        gameObject.transform.position = bedLoc.transform.position;
+
+        Debug.Log ("Bed is at " + bedLoc.transform.position);
+
+    
     }
 
     // Update is called once per frame

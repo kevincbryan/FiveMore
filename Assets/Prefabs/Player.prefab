@@ -167,6 +167,7 @@ MonoBehaviour:
   facingUp: 0
   triggerArea: {fileID: 2475630302634235042}
   fireDuration: 0.5
+  bed: {fileID: 6531077625818741043, guid: 42fd99bf9b8116d499db70e74c9a218f, type: 3}
 --- !u!1 &2475630302376994300
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ GameObject:
   - component: {fileID: 2475630302634235040}
   m_Layer: 0
   m_Name: UseArea
-  m_TagString: Player
+  m_TagString: PlayerTouch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -34,7 +34,7 @@ public class Interactable : MonoBehaviour
 
     private void OnDisable()
     {
-        gameController.distractions--;
+        //gameController.distractions--;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,7 +51,7 @@ public class Interactable : MonoBehaviour
 
     private void TurnOff()
     {
-        //gameController.distractions--;
+        gameController.distractions--;
         annoyingSound.Stop();
         timer.ResetObject();
         isUsed = false;
