@@ -43,4 +43,14 @@ public class TimedDistraction : MonoBehaviour
             }
         }
     }
+
+    public void ResetObject ()
+    {
+        if (isRepeating == true)
+        {
+            timeUntilFire = 0;
+            runOnce = false;
+
+        }
+    }
 }
