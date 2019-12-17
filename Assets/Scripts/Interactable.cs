@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
     public bool isUsed = false;
     private GameController gameController;
     public TimedDistraction timer;
+    public AudioSource annoyingSound;
 
 
     // Start is called before the first frame update
@@ -15,14 +16,7 @@ public class Interactable : MonoBehaviour
     {
         gameController = FindObjectOfType<GameController>();
 
-        if (gameController)
-        {
-            Debug.Log("Game Controller Found");
-        }
-        else
-        {
-            Debug.Log("Game Controller Not FOund");
-        }
+      
     }
 
     // Update is called once per frame
@@ -33,16 +27,9 @@ public class Interactable : MonoBehaviour
 
     private void OnEnable()
     {
-        gameController = FindObjectOfType<GameController>();
-        if (gameController)
-        {
-            Debug.Log("Game Controller Found");
-        }
-        else
-        {
-            Debug.Log("Game Controller Not FOund");
-        }
+        gameController = FindObjectOfType<GameController>();     
         gameController.distractions++;
+        annoyingSound.Play();
     }
 
     private void OnDisable()
@@ -54,7 +41,7 @@ public class Interactable : MonoBehaviour
     {
         if (isUsed == false)
         {
-            if (collision.tag == "Player")
+            if (collision.tag == "PlayerTouch")
             {
                 isUsed = true;
                 TurnOff();
@@ -65,6 +52,7 @@ public class Interactable : MonoBehaviour
     private void TurnOff()
     {
         //gameController.distractions--;
+        annoyingSound.Stop();
         timer.ResetObject();
         isUsed = false;
         gameObject.SetActive(false);
