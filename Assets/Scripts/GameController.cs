@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
 
     public int distractions = 0;
     private int minDistractions = 0;
-    private int maxDistractions = 7;
+    public int maxDistractions = 7;
     public float sleepRate = 1f;
     private int sleepCapacity = 3;
 

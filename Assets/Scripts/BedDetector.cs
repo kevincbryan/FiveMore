@@ -21,6 +21,11 @@ public class BedDetector : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if (gc != true)
+            {
+                gc = FindObjectOfType<GameController>();
+            }
+
             gc.inBed = true;
         }
     }

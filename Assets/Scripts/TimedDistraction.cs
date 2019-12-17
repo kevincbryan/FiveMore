@@ -10,6 +10,7 @@ public class TimedDistraction : MonoBehaviour
     public float minTime;
     public float maxTime;
     private float time;
+    private GameController gc;
 
     private float timeUntilFire = 0f;
     private bool runOnce = false;
@@ -18,6 +19,7 @@ public class TimedDistraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gc = FindObjectOfType<GameController>();
         time = maxTime;
         if (minTime < 0)
         {
@@ -38,11 +40,15 @@ public class TimedDistraction : MonoBehaviour
         //Debug.Log("Time is " + timeUntilFire);
         if (timeUntilFire >= time)
         {
-            if (runOnce == false)
+            if (gc.distractions < gc.maxDistractions)
             {
-                runOnce = true;
-                interactable.SetActive(true);
+                if (runOnce == false)
+                {
+                    runOnce = true;
+                    interactable.SetActive(true);
+                }
             }
+            
         }
     }
 

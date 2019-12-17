@@ -206,6 +206,16 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 5767864504358125601}
+    - target: {fileID: 4410388513947947576, guid: b0665a67f5815a34a94dd474fc581337,
+        type: 3}
+      propertyPath: spriteToEnable
+      value: 
+      objectReference: {fileID: 7872092902248075185}
+    - target: {fileID: 4410388513970475838, guid: b0665a67f5815a34a94dd474fc581337,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0665a67f5815a34a94dd474fc581337, type: 3}
 --- !u!1 &7872092902336630450 stripped
@@ -217,6 +227,12 @@ GameObject:
 --- !u!4 &7872092902336630453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4410388513947947578, guid: b0665a67f5815a34a94dd474fc581337,
+    type: 3}
+  m_PrefabInstance: {fileID: 5767864504879848591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7872092902248075185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4410388513970475838, guid: b0665a67f5815a34a94dd474fc581337,
     type: 3}
   m_PrefabInstance: {fileID: 5767864504879848591}
   m_PrefabAsset: {fileID: 0}
