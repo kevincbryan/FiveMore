@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &6097369590871918603
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,11 +48,15 @@ CanvasRenderer:
   m_GameObject: {fileID: 6097369590871918603}
   m_CullTransparentMesh: 0
 --- !u!114 &5058429167256097326
+=======
+--- !u!114 &8056407043884233813
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 6097369590871918603}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -104,6 +109,15 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
+=======
+  m_GameObject: {fileID: 4711326216217016755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9ebddb0b2abee41bdffa08319e8959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 5193233750130043274}
+>>>>>>> Stashed changes
 --- !u!1 &7086284101045048130
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,11 +564,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7086284101045048133}
     m_Modifications:
-    - target: {fileID: 6932796958535859713, guid: f803db7b22c08b9449a53aab10cbbf6e,
-        type: 3}
-      propertyPath: m_Name
-      value: DisruptionText
-      objectReference: {fileID: 0}
     - target: {fileID: 563437963398553850, guid: f803db7b22c08b9449a53aab10cbbf6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,6 +619,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 6932796958535859713, guid: f803db7b22c08b9449a53aab10cbbf6e,
+        type: 3}
+      propertyPath: m_Name
+      value: DisruptionText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219908087501728072, guid: f803db7b22c08b9449a53aab10cbbf6e,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219908087501728072, guid: f803db7b22c08b9449a53aab10cbbf6e,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 6873165545900594077, guid: f803db7b22c08b9449a53aab10cbbf6e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -680,11 +707,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7086284101045048133}
     m_Modifications:
-    - target: {fileID: 7352569062537886086, guid: ed972ae899082df428955b40783beba8,
-        type: 3}
-      propertyPath: m_Name
-      value: TimeText
-      objectReference: {fileID: 0}
     - target: {fileID: 7659973045239258880, guid: ed972ae899082df428955b40783beba8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,6 +762,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7352569062537886086, guid: ed972ae899082df428955b40783beba8,
+        type: 3}
+      propertyPath: m_Name
+      value: TimeText
+      objectReference: {fileID: 0}
     - target: {fileID: 4244477308867648571, guid: ed972ae899082df428955b40783beba8,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -758,6 +785,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6644380924691568422}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4711326216217016755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2113431790101655189, guid: ed972ae899082df428955b40783beba8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6644380924691568422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5193233750130043274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1452278576858365612, guid: ed972ae899082df428955b40783beba8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6644380924691568422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711326216217016755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8822858379683024980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -765,11 +810,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7086284101045048133}
     m_Modifications:
-    - target: {fileID: 928334180515874785, guid: ec17c95c0dd9d354897aff18c90f6de0,
-        type: 3}
-      propertyPath: m_Name
-      value: SleepMeter
-      objectReference: {fileID: 0}
     - target: {fileID: 3550269679714974526, guid: ec17c95c0dd9d354897aff18c90f6de0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -824,6 +864,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928334180515874785, guid: ec17c95c0dd9d354897aff18c90f6de0,
+        type: 3}
+      propertyPath: m_Name
+      value: SleepMeter
       objectReference: {fileID: 0}
     - target: {fileID: 1623800839147249167, guid: ec17c95c0dd9d354897aff18c90f6de0,
         type: 3}
