@@ -14,6 +14,7 @@ public class TimedDistraction : MonoBehaviour
     private float timeUntilFire = 0f;
     private bool runOnce = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,8 @@ public class TimedDistraction : MonoBehaviour
     void Update()
     {
         timeUntilFire += Time.deltaTime;
-        //Debug.Log("Time is " + timeUntilFire);
+        
+        Debug.Log("Time is " + timeUntilFire);
         if (timeUntilFire >= time)
         {
             if (runOnce == false)
@@ -46,10 +48,12 @@ public class TimedDistraction : MonoBehaviour
 
     public void ResetObject ()
     {
+
         if (isRepeating == true)
         {
             timeUntilFire = 0;
             runOnce = false;
+            time = Random.Range(minTime, maxTime);
 
         }
     }

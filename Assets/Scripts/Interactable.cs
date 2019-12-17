@@ -7,12 +7,22 @@ public class Interactable : MonoBehaviour
 {
     public bool isUsed = false;
     private GameController gameController;
+    public TimedDistraction timer;
 
 
     // Start is called before the first frame update
     void Start()
     {
         gameController = FindObjectOfType<GameController>();
+
+        if (gameController)
+        {
+            Debug.Log("Game Controller Found");
+        }
+        else
+        {
+            Debug.Log("Game Controller Not FOund");
+        }
     }
 
     // Update is called once per frame
@@ -21,9 +31,23 @@ public class Interactable : MonoBehaviour
         
     }
 
-    private void Awake()
+    private void OnEnable()
     {
+        gameController = FindObjectOfType<GameController>();
+        if (gameController)
+        {
+            Debug.Log("Game Controller Found");
+        }
+        else
+        {
+            Debug.Log("Game Controller Not FOund");
+        }
         gameController.distractions++;
+    }
+
+    private void OnDisable()
+    {
+        gameController.distractions--;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,7 +64,8 @@ public class Interactable : MonoBehaviour
 
     private void TurnOff()
     {
-        gameController.distractions--;
+        //gameController.distractions--;
+        timer.ResetObject();
         isUsed = false;
         gameObject.SetActive(false);
 
