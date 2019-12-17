@@ -6,7 +6,11 @@ TagManager:
   tags:
   - PlayerTouch
   - Bed
+<<<<<<< Updated upstream
   - ButtonPrompt
+=======
+  - TimeClock
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6829294417627981078}
   - component: {fileID: 5473136823816634716}
   - component: {fileID: 1452278576858365612}
+  - component: {fileID: 2519849066956827731}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: TIME 4:20 AM
+--- !u!114 &2519849066956827731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113431790101655189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9ebddb0b2abee41bdffa08319e8959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1452278576858365612}
 --- !u!1 &7352569062537886086
 GameObject:
   m_ObjectHideFlags: 0

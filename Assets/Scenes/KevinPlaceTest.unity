@@ -988,8 +988,32 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 734357436579576464, guid: bce2f59e09ef8a54586ce7c49c974fcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: TimeClock
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bce2f59e09ef8a54586ce7c49c974fcd, type: 3}
+--- !u!1 &5427127864674181067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 734357436579576464, guid: bce2f59e09ef8a54586ce7c49c974fcd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5427127864674181066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5427127864674181068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427127864674181067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9ebddb0b2abee41bdffa08319e8959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 0}
 --- !u!1001 &5767864504508513357
 PrefabInstance:
   m_ObjectHideFlags: 0
