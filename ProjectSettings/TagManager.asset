@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerTouch
   - Bed
+  - ButtonPrompt
   layers:
   - Default
   - TransparentFX

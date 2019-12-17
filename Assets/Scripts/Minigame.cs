@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Minigame : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Minigame : MonoBehaviour
     public static bool isPrompted = false;
     public bool isMyPrompt = false;
     private int digitCheck = 0;
+    public GameObject buttonPrompt;
+    private Text buttonText;
     
     
 
@@ -34,6 +37,9 @@ public class Minigame : MonoBehaviour
             }
             else
             {
+                buttonPrompt = GameObject.FindGameObjectWithTag("ButtonPrompt");
+                buttonText = buttonPrompt.GetComponent<Text>();
+                buttonText.text = "";
                 pc = FindObjectOfType<PlayerController>();
                 Interactable.promptSolved = true;
                 pc.playerStopped = false;
@@ -90,8 +96,10 @@ public class Minigame : MonoBehaviour
                 }
             }
 
-
-
+            buttonPrompt = GameObject.FindGameObjectWithTag("ButtonPrompt");
+            buttonText = buttonPrompt.GetComponent<Text>();
+            buttonText.text = prompt;
+            
             Debug.Log(prompt);
             //bool correct = GetInput(0);
 
