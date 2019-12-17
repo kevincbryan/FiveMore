@@ -41,6 +41,6 @@ public class timeClock : MonoBehaviour
             hours = 1;
         }
         display.text = time;
-        Debug.Log(display.text);
+        //Debug.Log(display.text);
     }
 }
