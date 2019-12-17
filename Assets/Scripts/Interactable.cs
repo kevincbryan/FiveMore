@@ -9,27 +9,43 @@ public class Interactable : MonoBehaviour
     private GameController gameController;
     public TimedDistraction timer;
     public AudioSource annoyingSound;
+    public Minigame mg;
+    public static bool promptSolved = false;
+    bool imPrompting = false;
+   // public GameObject spriteToEnable;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         gameController = FindObjectOfType<GameController>();
+        mg = gameObject.GetComponent<Minigame>();
 
-      
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (imPrompting == true && promptSolved == true)
+        {
+            imPrompting = false;
+            promptSolved = false;
+            TurnOff();
+        }
     }
 
     private void OnEnable()
     {
-        gameController = FindObjectOfType<GameController>();     
+        gameController = FindObjectOfType<GameController>();       
+        mg = gameObject.GetComponent<Minigame>();
+        
         gameController.distractions++;
-        annoyingSound.Play();
+
+        //mg.Prompt();
+        
+        //annoyingSound.Play();
     }
 
     private void OnDisable()
@@ -44,7 +60,9 @@ public class Interactable : MonoBehaviour
             if (collision.tag == "PlayerTouch")
             {
                 isUsed = true;
-                TurnOff();
+                imPrompting = true;
+                mg.Prompt();
+                //TurnOff();
             }
         }
     }
@@ -52,10 +70,13 @@ public class Interactable : MonoBehaviour
     private void TurnOff()
     {
         gameController.distractions--;
-        annoyingSound.Stop();
-        timer.ResetObject();
+        //annoyingSound.Stop();
         isUsed = false;
+        //Debug.Log("This has been turned off");
+
+        //spriteToEnable.SetActive(false);
         gameObject.SetActive(false);
+        timer.ResetObject();
 
     }
 }

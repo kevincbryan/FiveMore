@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4410388513947947578}
   - component: {fileID: 4410388513947947576}
   - component: {fileID: 4410388513947947579}
+  - component: {fileID: 3987174713915777968}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -46,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUsed: 0
+  timer: {fileID: 0}
+  annoyingSound: {fileID: 0}
 --- !u!61 &4410388513947947579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72,6 +75,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3987174713915777968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410388513947947581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2982a44024e73a8499101579ac084599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs:
+  - Horizontal
+  - Vertical
+  - Horizontal
+  - Vertical
+  polarity: 01010000
 --- !u!1 &4410388513970475838
 GameObject:
   m_ObjectHideFlags: 0

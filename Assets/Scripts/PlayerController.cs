@@ -19,17 +19,19 @@ public class PlayerController : MonoBehaviour
     private BedDetector bed;
     private Transform bedLoc;
 
+    public bool playerStopped;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Debug.Log("PlayerController is running");
+        //Debug.Log("PlayerController is running");
 
         bed= FindObjectOfType<BedDetector>();
         bedLoc = bed.transform;
         gameObject.transform.position = bedLoc.transform.position;
 
-        Debug.Log ("Bed is at " + bedLoc.transform.position);
+        //Debug.Log ("Bed is at " + bedLoc.transform.position);
 
     
     }
@@ -37,45 +39,48 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetAxis ("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        if (playerStopped == false)
         {
-            if (Input.GetAxis ("Horizontal") > 0)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
-                facingRight = true;
+                if (Input.GetAxis("Horizontal") > 0)
+                {
+                    facingRight = true;
+                }
+                else
+                {
+                    facingRight = false;
+                }
+
+                if (Input.GetAxis("Vertical") > 0)
+                {
+                    facingUp = true;
+                }
+                else
+                {
+                    facingUp = false;
+                }
+
+
+                isMoving = true;
+                //Debug.Log("getting Input " + Input.GetAxis ("Horizontal") + Input.GetAxis ("Vertical"));
+                Move();
             }
             else
             {
-                facingRight = false;
+                //Debug.Log("No input");
+                isMoving = false;
             }
 
-            if (Input.GetAxis ("Vertical") > 0)
+            if (Input.GetButtonDown("Fire1"))
             {
-                facingUp = true;
-            }
-            else
-            {
-                facingUp = false;
-            }
-
-
-            isMoving = true;
-            //Debug.Log("getting Input " + Input.GetAxis ("Horizontal") + Input.GetAxis ("Vertical"));
-            Move();
-        }
-        else
-        {
-            //Debug.Log("No input");
-            isMoving = false;
-        }
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if (isFiring == false)
-            {
-                ActivateTrigger();
+                if (isFiring == false)
+                {
+                    ActivateTrigger();
+                }
             }
         }
+     
     }
 
     private void Move()
