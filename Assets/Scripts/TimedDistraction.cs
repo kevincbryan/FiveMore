@@ -35,7 +35,7 @@ public class TimedDistraction : MonoBehaviour
     {
         timeUntilFire += Time.deltaTime;
         
-        Debug.Log("Time is " + timeUntilFire);
+        //Debug.Log("Time is " + timeUntilFire);
         if (timeUntilFire >= time)
         {
             if (runOnce == false)

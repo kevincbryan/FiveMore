@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public float sleepValue;
     private float minSleepValue = 0f;
     private float maxSleepValue = 100f;
+    public Slider sleepMeter;
+    public Slider disruptionMeter;
+   
 
     public int distractions = 0;
     private int minDistractions = 0;
@@ -26,6 +30,9 @@ public class GameController : MonoBehaviour
     void Update()
     {
         sleepValue += (sleepCapacity - distractions) * sleepRate * Time.deltaTime;
+
+        sleepMeter.value = maxSleepValue - sleepValue;
+        disruptionMeter.value = maxDistractions - distractions;
         //Debug.Log("Sleep Value is " + sleepValue);
 
         if (sleepValue < minSleepValue)
